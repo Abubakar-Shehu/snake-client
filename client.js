@@ -2,8 +2,8 @@ const net = require("net");
 
 const connect = function () {
   const conn = net.createConnection({
-    host: 'localhost',// IP address here,
-    port: 50541,// PORT number here,
+    host: 'localhost',
+    port: 50541,
   });
 
   // interpret incoming data as text
@@ -13,10 +13,10 @@ const connect = function () {
     console.log('connection succeful')
     conn.write('Name: ABU')
     // conn.write('Move: down')
-    setInterval(() => {
-      conn.write('Move: down')
-    }, 500)
-    // setTimeout(() => {
+    // setInterval(() => {
+    //   conn.write('Move: down')
+    // }, 500)
+    // // setTimeout(() => {
     //   conn.write('Move: left')
     // }, 700)
     // setTimeout(() => {
@@ -33,7 +33,3 @@ const connect = function () {
 
 module.exports = connect;
 
-// "Move: up" - move up one square (unless facing down)
-// "Move: down" - move down one square (unless facing up)
-// "Move: left" - move left one square (unless facing right)
-// "Move: right" - move left one square (unless facing left)

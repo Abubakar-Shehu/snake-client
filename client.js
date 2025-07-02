@@ -11,7 +11,9 @@ const connect = function () {
 
   conn.on('connect', () => {
     console.log('connection succeful')
+    conn.write('Name: ABU')
   });
+
 
   conn.on('data', (data) => {
     console.log(data)

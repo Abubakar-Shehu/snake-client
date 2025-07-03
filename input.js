@@ -11,18 +11,25 @@ const setupInput = function (conn) {
     if (key === "\u0003") {
       process.exit();
     }
-    if (key === "w") {
+    if (key === "w" || key === "W") {
       connection.write("Move: up")
     }
-    if (key === "a") {
+    if (key === "a" || key === "A") {
       connection.write('Move: left')
     }
-    if (key === "s") {
+    if (key === "s" || key === "S") {
       connection.write('Move: down')
     }
-    if (key === "d") {
+    if (key === "d" || key === "D") {
       connection.write('Move: right')
     }
+    if (key === "t" || key === "T") {
+      connection.write('Say: RUN')
+    }
+    if (key === "F" || key === "f") {
+      connection.write('Say: f in the chat')
+    }
+
   })
   return stdin;   // return the stdin object so we can use it elsewhere in the program
 };
